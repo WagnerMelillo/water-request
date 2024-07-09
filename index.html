@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solicitação de Copos de Água</title>
+</head>
+<body>
+  <h1>Solicitação de Copos de Água</h1>
+  <form id="waterRequestForm">
+    <label for="name">Nome:</label><br>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="quantity">Quantidade de Copos:</label><br>
+    <input type="number" id="quantity" name="quantity"><br><br>
+    <input type="submit" value="Solicitar">
+  </form>
+
+  <script>
+    document.getElementById('waterRequestForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const quantity = document.getElementById('quantity').value;
+      alert(`Solicitação enviada! Nome: ${name}, Quantidade: ${quantity}`);
+    });
+  </script>
+</body>
+</html>
